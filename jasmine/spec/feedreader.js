@@ -88,9 +88,8 @@ $(function() {
     * Remember, loadFeed() is asynchronous so this test will require
     * the use of Jasmine's beforeEach and asynchronous done() function.
     */
-    it('feeds defined', function(done) {
-      expect($('.entry').length).toBeGreaterThan(0);
-      done();
+    it('feeds defined', function() {
+      expect($('.feed .entry').length).toBeGreaterThan(0);
     });
   });
 
@@ -114,9 +113,8 @@ $(function() {
     * Remember, loadFeed() is asynchronous.
     */
     // Check if the two loaded feeds are different
-    it('feeds update', function(done) {
+    it('feeds update', function() {
       expect(updatedFeed).not.toEqual(originalFeed);
-      done();
     });
   });
 }());
